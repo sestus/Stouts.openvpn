@@ -139,3 +139,7 @@ Licensed under the MIT License. See the LICENSE file for details.
 #### Feedback, bug-reports, requests, ...
 
 Are [welcome](https://github.com/Stouts/Stouts.openvpn/issues)!
+
+
+#### Note ####
+Should add `iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE` and check that `sysctl net.ipv4.ip_forward` in order to route internet traffic through vpn
